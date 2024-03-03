@@ -1,7 +1,7 @@
 //object descructuring syntax to import triangle, square, and circle objects from shapes.js
-const { Triangle } = require("./lib/shapes");
-const { Circle } = require('./lib/shapes');
-const { Square} = require('./lib/shapes');
+const { Triangle } = require("./lib/shapes.js");
+const { Circle } = require('./lib/shapes.js');
+const { Square} = require('./lib/shapes.js');
 
 //import info from askForUserInput async function in userInput.js
 const askForUserInput = require("./lib/userInput");
@@ -13,11 +13,11 @@ const svgApp = async () => {
   //if userInput value for key 'shape' is triangle, then create new instance of Triangle class
   //else if other shape name in string entered by user, make instance of that shape class instead
   let myShape =
-    shapeData.shape === "triangle"
+    shapeData.shape == "triangle"
       ? new Triangle()
-      : shapeData.shape === "circle"
+      : shapeData.shape == "circle"
       ? new Circle()
-      : shapeData.shape === "square"
+      : shapeData.shape == "square"
       ? new Square()
       : null;
 //sets shape color to color value from user data
