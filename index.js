@@ -1,7 +1,8 @@
 //object descructuring syntax to import triangle, square, and circle objects from shapes.js
-const { Triangle } = require("./lib/shapes.js");
-const { Circle } = require('./lib/shapes.js');
-const { Square} = require('./lib/shapes.js');
+const {Triangle, Circle, Square} = require("./lib/shapes.js");
+
+//need to require file system package in order to write new files
+const fs = require("fs");
 
 //import info from askForUserInput async function in userInput.js
 const askForUserInput = require("./lib/userInput");
@@ -29,7 +30,7 @@ const svgApp = async () => {
     xmlns="http://www.w3.org/2000/svg">
 
  ${myShape.render()}
- <text x="150" y="125" font-size="60" text-anchor="middle" fill="${shapeData.textColor}">${shapeData.text}</text>
+ <text x="150" y="125" font-size="40" text-anchor="middle" fill="${shapeData.textColor}">${shapeData.text}</text>
 
 </svg>`;
 
